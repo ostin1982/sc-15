@@ -1,0 +1,62 @@
+@import 'default'
+
+.benefit
+    padding: 110px 0
+
+    &__block
+        padding: 0 106px
+
+    &__heading
+        display: none
+
+    &__slider
+        position: relative
+
+    &__card
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        flex-direction: column
+        max-width: 308px
+        width: 100%
+        margin-right: 28px
+
+        &:last-child
+            margin-right: 0
+
+    &__title
+        padding: 12px 0 4px 0
+        font-weight: 500
+        font-size: $link
+        line-height: 140%
+        text-align: center
+
+    &__subtitle
+        font-weight: 400
+        font-size: $main
+        line-height: 140%
+        text-align: center
+        color: var(--description-grey)
+
+@media screen and (max-width: 720px)
+    .benefit
+        padding: 60px 0
+
+        &__block
+            padding: 0 12px
+
+        &__heading
+            display: block
+            font-weight: 500
+            font-size: $big
+            line-height: 122%
+            padding: 0 0 30px 0
+            text-align: center
+
+            &_blue
+                color: var(--blue)
+                text-transform: uppercase
+
+        &__card
+            max-width: 100%
+            padding: 0 0 33px 0

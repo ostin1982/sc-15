@@ -1,0 +1,156 @@
+@import 'default'
+
+.popup
+    display: flex
+    justify-content: center
+    align-items: center
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    visibility: hidden
+    background: rgba(0, 0, 0, 0.2)
+    opacity: 0
+    z-index: 10
+
+    &_good
+        display: flex
+        justify-content: center
+        align-items: center
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        visibility: hidden
+        background: rgba(0, 0, 0, 0.2)
+        opacity: 0
+        z-index: 10
+
+    &_bad
+        display: flex
+        justify-content: center
+        align-items: center
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        visibility: hidden
+        background: rgba(0, 0, 0, 0.2)
+        opacity: 0
+        z-index: 10
+
+    &_active
+        visibility: visible
+        opacity: 1
+        transition: 0.6s
+
+    &__block
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        overflow: hidden
+        background: var(--white)
+        padding: 32px 46px
+        border-radius: 30px
+        transform: translateY(-50px)
+        width: 612px
+
+        &_good
+            width: 470px
+            padding: 50px 76px
+
+    &__cross
+        position: absolute
+        top: 32px
+        right: 32px
+
+        &:hover
+            opacity: 0.8
+
+    &__title
+        font-weight: 500
+        font-size: $list
+        line-height: 122%
+        text-align: center
+
+    &__subtitle
+        font-weight: 400
+        font-size: $big
+        line-height: 122%
+        padding: 7px 0 0 0
+        text-align: center
+
+        &_padding
+            padding: 10px 0 0 0
+
+    &__form
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        width: 100%
+        padding: 16px 0 0 0
+
+    &__button
+        width: 100%
+
+    &__small
+        font-weight: 400
+        font-size: $main
+        line-height: 20px
+        text-align: center
+        color: var(--propose-grey)
+        padding: 12px 0 0 0
+    
+    &__circle
+        width: 75px
+        height: 75px
+        border-radius: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 0 25px 0
+
+        &_blue
+            background: var(--blue)
+
+        &_red
+            background: var(--red)
+
+@media screen and (max-width: 720px)
+    .popup
+        &__cross
+            top: 18px
+            right: 18px
+
+            &_none
+                display: none
+
+        &__block
+            width: 301px
+            padding: 19px 25px
+            border-radius: 20px
+
+            &_good
+                width: 277px
+                padding: 40px 18px
+                border-radius: 30px
+
+        &__title
+            font-size: $big
+
+        &__subtitle
+            font-size: $link
+
+        &__small
+            font-size: $short
+            line-height: 13px
+
+        &__circle
+            width: 61px
+            height: 61px

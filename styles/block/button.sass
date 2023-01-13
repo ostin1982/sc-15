@@ -1,0 +1,120 @@
+@import 'default'
+
+.button
+    border: none
+    background-color: inherit
+    cursor: pointer
+
+    &__search
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__header
+        border: 1px solid var(--blue)
+        border-radius: 10px
+        padding: 16px 29px
+        font-weight: 400
+        font-size: $link
+        line-height: 24px
+
+        &:hover
+            background-color: var(--blue-hover)
+            border: 1px solid var(--blue-hover)
+            color: var(--white)
+            box-shadow: 0px 0px 8px rgba(59, 71, 255, 0.58)
+
+        &:active
+            background-color: var(--blue-active)
+            border: 1px solid var(--blue-active)
+            color: var(--white)
+
+        &:disabled
+            background: var(--disabled-grey)
+            border: 1px solid var(--disabled-grey)
+            color: var(--white)
+
+    &__icon
+        width: 25px
+        height: 28px
+
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: contain
+
+    &__main
+        background: var(--blue)
+        border-radius: 10px
+        padding: 24px 29px
+        color: var(--white)
+        font-weight: 400
+        font-size: $link
+        line-height: 24px
+
+        &:hover
+            background-color: var(--blue-hover)
+            box-shadow: 0px 0px 8px rgba(59, 71, 255, 0.58)
+
+        &:active
+            background-color: var(--blue-active)
+
+        &:disabled
+            background: var(--disabled-grey)
+
+        &_padding
+            padding: 24px 69px
+
+        &_pushbutton
+            width: 100%
+
+    &__footer
+        border: 1px solid var(--blue)
+        border-radius: 10px
+        padding: 16px 29px
+        font-weight: 400
+        font-size: $link
+        line-height: 24px
+        color: var(--white)
+
+        &:hover
+            background-color: var(--blue-hover)
+            border: 1px solid var(--blue-hover)
+            box-shadow: 0px 0px 8px rgba(59, 71, 255, 0.58)
+
+        &:active
+            background-color: var(--blue-active)
+            border: 1px solid var(--blue-active)
+
+        &:disabled
+            background: var(--disabled-grey)
+            border: 1px solid var(--disabled-grey)
+
+    &__popup
+        width: 100%
+        background: var(--blue)
+        border-radius: 10px
+        padding: 24px 0
+        color: var(--white)
+        font-weight: 400
+        font-size: $link
+        line-height: 24px
+
+        &:hover
+            background-color: var(--blue-hover)
+            box-shadow: 0px 0px 8px rgba(59, 71, 255, 0.58)
+
+        &:active
+            background-color: var(--blue-active)
+
+        &:disabled
+            background: var(--disabled-grey)
+
+@media screen and (max-width: 720px)
+    .button
+        &__icon
+            width: 18px
+            height: 19px
+
+        &__popup
+            padding: 18px 0

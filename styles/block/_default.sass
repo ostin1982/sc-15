@@ -1,0 +1,62 @@
+:root
+    --white: #ffffff
+    --dark-white: #f9f9f9
+    --black: #121212
+    --grey: #c3c3c3    
+    --propose-grey: #c4c4c4   
+    --light-grey: #e4e4e4
+    --disabled-grey: #dbdbdb
+    --description-grey: #9b9b9b
+    --blue: #232ed1
+    --blue-hover: #3945f5
+    --blue-active: #333ff2
+    --red: #ff0000
+
+$number: 54px
+$h1: 50px
+$number-small: 42px
+$h2: 30px
+$gap: 28px
+$h3: 26px
+$list: 24px
+$big: 20px
+$link: 18px
+$main: 16px
+$more: 15px
+$small: 14px
+$little: 12px
+$short: 11px
+$tiny: 10px
+
+@mixin title
+    font-weight: 500
+    font-size: $h2
+    line-height: 122%
+    text-align: center
+
+@mixin background
+    background: var(--dark-white)
+    border-radius: 50px
+    padding: 60px 120px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+@mixin background-1024
+    border-radius: 30px
+    padding: 40px 14px
+
+@keyframes background-animation
+    0% 
+        background: var(--light-grey)
+
+    100% 
+        background: var(--blue)
+
+@keyframes border-animation
+    0% 
+        border: 1px solid var(--light-grey)
+
+    100% 
+        border: 1px solid var(--blue)

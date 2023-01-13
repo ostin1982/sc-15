@@ -1,0 +1,153 @@
+@import 'default'
+
+.fixing
+    padding: 110px 0
+
+    &__title
+        @include title
+
+    &__block
+        padding: 50px 106px 0 106px
+
+    &__product
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 19px 36px
+
+    &__card
+        background: var(--white)
+        border: 1px solid var(--light-grey)
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06)
+        border-radius: 30px
+        padding: 20px 32px 49px 32px
+        text-decoration: none
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+
+        &:hover
+            animation: border-animation 1s forwards
+            text-decoration: none
+
+            & .fixing__arrow
+                animation: background-animation 1s forwards
+
+                &::after
+                    animation: background-animation 1s forwards
+
+                &::before
+                    animation: background-animation 1s forwards
+
+        &:active
+            border: 1px solid var(--blue)
+            text-decoration: none
+
+            & .fixing__arrow
+                background: var(--blue)
+
+                &::after
+                    background: var(--blue)
+
+                &::before
+                    background: var(--blue)
+
+    &__subtitle
+        font-weight: 500
+        font-size: $h3
+        line-height: 122%
+        color: var(--black)
+    
+    &__arrow
+        position: relative
+        margin: 20px 0 59px 0
+        width: calc(100% - 64px)
+        height: 2px
+        background: var(--light-grey)
+
+        &::after
+            position: absolute
+            content: ''
+            width: 10px
+            height: 2px
+            background: var(--light-grey)
+            transform: rotate(-45deg)
+            right: 0
+            top: 4px
+
+        &::before
+            position: absolute
+            content: ''
+            width: 10px
+            height: 2px
+            background: var(--light-grey)
+            transform: rotate(45deg)
+            right: 0
+            top: -4px
+
+    &__picture
+        width: 195px
+        height: 154px
+
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: contain
+
+@media screen and (max-width: 1300px)
+    .fixing
+        &__block
+            padding: 40px 29px 0 29px
+
+        &__product
+            gap: 15px 11px
+
+        &__card
+            padding: 20px 19px 14px 19px
+
+
+@media screen and (max-width: 1024px)
+    .fixing
+        padding: 100px 0
+
+        &__title
+            font-size: $list
+            line-height: 122%
+
+@media screen and (max-width: 1000px)
+    .fixing
+        &__product
+            grid-template-columns: 1fr 1fr 1fr
+
+@media screen and (max-width: 900px)
+    .fixing
+        &__product
+            grid-template-columns: 1fr 1fr
+
+@media screen and (max-width: 720px)
+    .fixing
+        padding: 60px 0
+
+        &__title
+            font-size: $big
+            line-height: 122%
+
+        &__block
+            padding: 30px 9px 0 9px
+
+        &__product
+            gap: 16px
+
+        &__card
+            padding: 18px 16px 22px 16px
+
+        &__subtitle
+            font-size: $link
+            line-height: 122%
+
+        &__arrow
+            margin: 20px 0 22px 0
+
+        &__picture
+            width: 111px
+            height: 88px

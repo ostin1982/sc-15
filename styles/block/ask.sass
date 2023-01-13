@@ -1,0 +1,163 @@
+@import 'default'
+
+.ask
+    &__background
+        @include background
+        flex-direction: row
+        height: 528px
+
+    &__left
+        width: 40%
+        z-index: 4
+
+    &__title
+        @include title
+        text-align: left
+
+    &__subtitle
+        padding: 21px 0 0 0
+        text-align: left
+        font-weight: 400
+        font-size: $main
+        line-height: 140%
+
+    &__info
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        padding: 35px 0 0 0
+
+    &__propose
+        padding: 0 0 0 20px
+
+    &__suggest
+        font-weight: 400
+        font-size: $main
+        line-height: 140%
+        color: var(--propose-grey)
+
+    &__phone
+        font-weight: 600
+        font-size: $main
+        line-height: 140%
+        color: var(--propose-grey)
+        text-decoration: none
+
+        &:hover
+            color: var(--blue-hover)
+            text-decoration: none
+
+        &:active
+            color: var(--blue-active)
+            text-decoration: none
+
+    &__right
+        position: relative
+        width: 60%
+
+        &::after
+            position: absolute
+            content: ''
+            background: url('../../img/dispatcher.png') no-repeat
+            top: -362px
+            right: -62px
+            width: 535px
+            height: 626px
+
+        &::before
+            position: absolute
+            content: ''
+            background: url('../../img/grey-ball.png') no-repeat
+            top: -264px
+            right: -120px
+            width: 723px
+            height: 568px
+
+    &__additionally
+        display: none
+
+@media screen and (max-width: 1200px)
+    .ask
+        &__background
+            border-radius: 30px
+            padding: 59px 18px
+            height: 447px
+
+        &__left
+            width: 50%
+
+        &__right
+            width: 50%
+
+            &::after
+                background: url('../../img/dispatcher-small.png') no-repeat
+                top: -262px
+                right: 20px
+                width: 405px
+                height: 485px
+
+            &::before
+                background: url('../../img/grey-ball-small.png') no-repeat
+                top: -224px
+                right: -18px
+                width: 505px
+                height: 447px
+
+@media screen and (max-width: 1024px)
+    .ask
+        &__title
+            font-size: $gap
+            line-height: 122%
+
+@media screen and (max-width: 900px)
+    .ask
+        &__background
+            flex-direction: column
+            height: 100%
+            background: var(--white)
+            padding: 0 9px 69px 9px
+
+        &__left
+            width: 100%
+            padding: 0 0 18px 0
+
+        &__info
+            display: none
+
+        &__right
+            width: 100%
+            height: 300px
+            background: var(--light-grey)
+
+            &::after
+                background: url('../../img/dispatcher-tiny.png') no-repeat
+                top: -3px
+                right: calc( 50% -  131px)
+                width: 262px
+                height: 302px
+
+            &::before
+                display: none
+
+        &__additionally
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            padding: 20px 0 0 0
+
+@media screen and (max-width: 720px)
+        .ask
+            &__title
+                font-size: $big
+                line-height: 122%
+
+            &__additionally
+                flex-direction: column
+                width: 100%
+
+            &__propose
+                display: flex
+                padding: 10px 0 0 0
+            
+            &__suggest
+                padding: 0 4px 0 0

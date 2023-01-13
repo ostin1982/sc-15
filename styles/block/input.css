@@ -1,0 +1,131 @@
+:root {
+  --white: #ffffff;
+  --dark-white: #f9f9f9;
+  --black: #121212;
+  --grey: #c3c3c3;
+  --propose-grey: #c4c4c4;
+  --light-grey: #e4e4e4;
+  --disabled-grey: #dbdbdb;
+  --description-grey: #9b9b9b;
+  --blue: #232ed1;
+  --blue-hover: #3945f5;
+  --blue-active: #333ff2;
+  --red: #ff0000;
+}
+
+@-webkit-keyframes background-animation {
+  0% {
+    background: var(--light-grey);
+  }
+  100% {
+    background: var(--blue);
+  }
+}
+
+@keyframes background-animation {
+  0% {
+    background: var(--light-grey);
+  }
+  100% {
+    background: var(--blue);
+  }
+}
+@-webkit-keyframes border-animation {
+  0% {
+    border: 1px solid var(--light-grey);
+  }
+  100% {
+    border: 1px solid var(--blue);
+  }
+}
+@keyframes border-animation {
+  0% {
+    border: 1px solid var(--light-grey);
+  }
+  100% {
+    border: 1px solid var(--blue);
+  }
+}
+.input {
+  width: 100%;
+  padding: 26px 8px;
+  outline: 1px solid var(--propose-grey);
+  border: none;
+  border-radius: 8px;
+  margin: 0 0 19px 0;
+  cursor: pointer;
+}
+.input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--propose-grey);
+}
+.input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--propose-grey);
+}
+.input::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--propose-grey);
+}
+.input:focus {
+  outline: 1px solid var(--blue);
+}
+.input:hover {
+  outline: 1px solid var(--blue);
+}
+.input[type=text] {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--propose-grey);
+}
+.input[type=tel] {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--propose-grey);
+}
+.input__look {
+  position: relative;
+  width: 696px;
+  margin: 0;
+  padding: 26px 50px;
+}
+
+.highlight {
+  background-color: var(--red);
+}
+
+@media screen and (max-width: 900px) {
+  .input {
+    width: calc(100vw - 110px);
+    outline: none;
+  }
+}
+@media screen and (max-width: 720px) {
+  .input {
+    padding: 17px 8px;
+  }
+  .input::-moz-placeholder {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .input:-ms-input-placeholder {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .input::placeholder {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .input__look {
+    width: calc(100vw - 110px);
+    outline: none;
+  }
+}/*# sourceMappingURL=input.css.map */

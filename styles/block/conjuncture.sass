@@ -1,0 +1,72 @@
+@import 'default'
+
+.conjuncture
+    &__background
+        @include background
+
+    &__title
+        @include title
+
+        &_blue
+            color: var(--blue)
+            text-transform: uppercase
+
+    &__block
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        padding: 50px 0 0 0
+
+    &__box
+        &:last-child
+            padding: 0 0 0 21px
+            border-left: 1px solid var(--light-grey)
+
+    &__subtitle
+        font-weight: 400
+        font-size: $main
+        line-height: 140%
+
+    &__more
+        display: none
+
+@media screen and (max-width: 1024px)
+    .conjuncture
+        &__background
+            @include background-1024
+
+@media screen and (max-width: 720px)
+    .conjuncture
+        &__background
+            padding: 20px 10px
+
+        &__title
+            display: none
+
+        &__block
+            padding: 0
+            flex-direction: column
+
+        &__box
+            &:first-child
+                padding: 0 0 10px 0
+                
+            &:last-child
+                padding: 0
+                border-left: none
+
+        &__subtitle
+            &_more
+                display: none
+
+        &__more
+            display: block
+            font-weight: 500
+            font-size: $more
+            line-height: 122%
+            text-decoration: none
+            color: var(--blue)
+            margin: 10px 0 0 0
+
+            &_inactive
+                display: none

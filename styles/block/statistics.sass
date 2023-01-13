@@ -1,0 +1,98 @@
+@import 'default'
+
+.statistics
+    padding: 110px 0 126px 0
+
+    &__title
+        @include title
+
+        &_blue
+            color: var(--blue)
+            text-transform: uppercase
+
+    &__text
+        width: 850px
+        margin: 0 auto
+        padding: 23px 0
+
+    &__subtitle
+        font-weight: 400
+        font-size: $main
+        line-height: 140%
+        text-align: center
+
+    &__information
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__card
+        padding: 0 38px 0 38px
+        border-right: 1px solid var(--light-grey)
+
+        &:first-child
+            padding: 0 38px 0 0
+
+        &:last-child
+            padding: 0 0 0 38px
+            border-right: none
+
+    &__number
+        font-weight: 500
+        font-size: $number
+        line-height: 122%
+        color: var(--blue)
+        text-align: center
+        padding: 30px 0 0 0
+
+    &__info
+        font-weight: 400
+        font-size: $main
+        line-height: 140%
+        padding: 4px 0 0 0
+        text-align: center
+
+@media screen and (max-width: 1024px)
+    .statistics
+        padding: 100px 0 110px 0
+
+        &__information
+            flex-wrap: nowrap
+            overflow-y: hidden
+            overflow-x: auto
+            width: 100%
+
+            &::-webkit-scrollbar
+                display: none
+
+        &__text
+            max-width: 850px
+            width: 100%
+
+        &__card
+            min-width: 300px
+            padding: 0 12px
+
+@media screen and (max-width: 720px)
+    .statistics
+        &__title
+            font-size: $big
+            line-height: 122%
+
+        &__text
+            padding: 15px 0 33px 0
+
+        &__card
+            max-width: 220px
+            padding: 0 2px 0 2px
+
+            &:first-child
+                padding: 0 2px 0 0
+
+            &:last-child
+                padding: 0 0 0 2px
+
+        &__number
+            font-size: $number-small
+            line-height: 122%
+            padding: 0

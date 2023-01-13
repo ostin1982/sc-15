@@ -1,0 +1,193 @@
+@import 'default'
+
+.contacts
+    padding: 120px 0 110px 0
+
+    &__background
+        @include background
+        flex-direction: row
+        height: 516px
+        padding: 0
+
+    &__left
+        width: 50%
+        height: 516px
+        overflow: hidden
+        border-radius: 50px 0px 0px 50px
+
+    &__map
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    &__right
+        width: 50%
+
+    &__title
+        @include title
+        color: var(--blue)
+
+    &__address
+        font-weight: 400
+        font-size: $link
+        line-height: 140%
+        text-align: center
+        padding: 6px 0 42px 0
+
+    &__roster
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0
+
+    &__list 
+        list-style-type: none
+        margin: 0
+        
+        &:first-child
+            padding: 0 85px 0 26px
+
+    &__text
+        position: relative
+        font-weight: 400
+        font-size: $main
+        line-height: 122%
+        margin: 0
+        width: 206px
+
+        &:first-child
+            padding: 0 0 11px 0
+
+        &::before
+            position: absolute
+            content: ''
+            width: 8px
+            height: 8px
+            background-color: var(--blue)
+            border-radius: 50%
+            top: 14px
+            left: -25px
+        
+        &::after
+            position: absolute
+            content: ''
+            width: 16px
+            height: 16px
+            border: 1px solid var(--blue)
+            box-shadow: 0px 0px 3px 2px rgba(51, 100, 153, 0.16)
+            border-radius: 50%
+            top: 9px
+            left: -30px
+
+    &__info
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 35px 0 0 0
+
+    &__propose
+        padding: 0 0 0 20px
+
+    &__suggest
+        font-weight: 400
+        font-size: $main
+        line-height: 140%
+        color: var(--propose-grey)
+
+    &__phone
+        font-weight: 600
+        font-size: $main
+        line-height: 140%
+        color: var(--propose-grey)
+        text-decoration: none
+
+        &:hover
+            color: var(--blue-hover)
+            text-decoration: none
+
+        &:active
+            color: var(--blue-active)
+            text-decoration: none
+
+    &__additionally
+        display: none
+
+@media screen and (max-width: 1200px)
+    .contacts
+        &__list
+            &:first-child
+                padding: 0 44px 0 26px
+
+
+@media screen and (max-width: 1024px)
+    .contacts
+        padding: 100px 0
+
+        &__background
+            border-radius: 20px
+
+        &__title
+            font-size: $list
+            line-height: 122%
+
+        &__address
+            padding: 10px 0 20px 0
+
+        &__roster
+            flex-direction: column
+            align-items: flex-start
+
+        &__list
+            padding: 0 0 0 46px
+
+            &:first-child
+                padding: 0 0 12px 46px
+
+        &__text
+            width: 100%
+
+            &::before
+                top: 5px
+
+            &::after
+                top: 0
+
+@media screen and (max-width: 720px)
+        .contacts
+            &__background
+                flex-direction: column-reverse
+                height: 100%
+
+            &__left
+                width: 100%
+                height: 293px
+                overflow: hidden
+                border-radius: 20px 0px 0px 20px
+
+            &__info
+                display: none
+
+            &__additionally
+                display: flex
+                justify-content: flex-start
+                align-items: center
+                padding: 20px 10px 0 10px
+                flex-direction: column
+                width: 100%
+
+            &__propose
+                display: flex
+                padding: 10px 0 0 0
+            
+            &__suggest
+                padding: 0 4px 0 0
+
+            &__right
+                width: 100%
+                padding: 24px 11px 20px 11px
+
+            &__title
+                font-size: $big
+
+            &__address
+                font-size: $link

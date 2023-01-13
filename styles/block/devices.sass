@@ -1,0 +1,137 @@
+@import 'default'
+    
+.devices
+    &__background
+        @include background
+
+    &__title
+        @include title
+
+    &__lists
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        width: 100%
+        margin: 83px 0 73px 0
+
+    &__list
+        position: relative
+        list-style-type: none
+        border-left: 1px solid var(--light-grey)
+        padding: 0 0 0 39px
+
+        &:first-child
+            border-left: none
+            padding: 0
+
+    &__ref
+        padding: 0 0 29px 0
+
+        &:last-child
+            padding: 0
+
+    &__link
+        font-weight: 400
+        font-size: $main
+        line-height: 140%
+        text-decoration: none
+        color: var(--blue)
+
+        &:hover
+            text-decoration: none
+            color: var(--blue-hover)
+
+    &__text
+        width: 850px
+        margin: 0 auto
+
+    &__subtitle
+        text-align: center
+        font-weight: 400
+        font-size: $main
+        line-height: 140%
+
+    &__info
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 40px 0 0 0
+
+    &__propose
+        padding: 0 0 0 20px
+
+    &__suggest
+        font-weight: 400
+        font-size: $main
+        line-height: 140%
+        color: var(--propose-grey)
+        width: 150px
+
+    &__phone
+        font-weight: 600
+        font-size: $main
+        line-height: 140%
+        color: var(--propose-grey)
+        text-decoration: none
+
+        &:hover
+            color: var(--blue-hover)
+            text-decoration: none
+
+        &:active
+            color: var(--blue-active)
+            text-decoration: none
+
+@media screen and (max-width: 1024px)
+    .devices
+        &__background
+            @include background-1024
+
+        &__lists
+            margin: 50px 0
+
+        &__list
+            padding: 0 0 0 26px
+
+        &__text
+            max-width: 860px
+            width: 100%
+
+@media screen and (max-width: 900px)
+    .devices
+        &__lists
+            width: 100%
+            flex-wrap: nowrap
+            overflow-y: hidden
+            overflow-x: auto
+
+            &::-webkit-scrollbar
+                display: none    
+
+        &__list
+            min-width: 280px
+
+@media screen and (max-width: 720px)
+    .devices
+        &__title
+            font-size: $big
+            line-height: 122%
+
+        &__text
+            padding: 0 9px
+
+        &__subtitle
+            text-align: left
+
+        &__info
+            flex-direction: column
+            width: 100%
+
+        &__propose
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 10px 0 0 0
+
+        &__suggest
+            padding: 0 6px 0 0

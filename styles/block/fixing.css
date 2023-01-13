@@ -1,0 +1,210 @@
+:root {
+  --white: #ffffff;
+  --dark-white: #f9f9f9;
+  --black: #121212;
+  --grey: #c3c3c3;
+  --propose-grey: #c4c4c4;
+  --light-grey: #e4e4e4;
+  --disabled-grey: #dbdbdb;
+  --description-grey: #9b9b9b;
+  --blue: #232ed1;
+  --blue-hover: #3945f5;
+  --blue-active: #333ff2;
+  --red: #ff0000;
+}
+
+@-webkit-keyframes background-animation {
+  0% {
+    background: var(--light-grey);
+  }
+  100% {
+    background: var(--blue);
+  }
+}
+
+@keyframes background-animation {
+  0% {
+    background: var(--light-grey);
+  }
+  100% {
+    background: var(--blue);
+  }
+}
+@-webkit-keyframes border-animation {
+  0% {
+    border: 1px solid var(--light-grey);
+  }
+  100% {
+    border: 1px solid var(--blue);
+  }
+}
+@keyframes border-animation {
+  0% {
+    border: 1px solid var(--light-grey);
+  }
+  100% {
+    border: 1px solid var(--blue);
+  }
+}
+.fixing {
+  padding: 110px 0;
+}
+.fixing__title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 122%;
+  text-align: center;
+}
+.fixing__block {
+  padding: 50px 106px 0 106px;
+}
+.fixing__product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 19px 36px;
+}
+.fixing__card {
+  background: var(--white);
+  border: 1px solid var(--light-grey);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
+  border-radius: 30px;
+  padding: 20px 32px 49px 32px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.fixing__card:hover {
+  -webkit-animation: border-animation 1s forwards;
+          animation: border-animation 1s forwards;
+  text-decoration: none;
+}
+.fixing__card:hover .fixing__arrow {
+  -webkit-animation: background-animation 1s forwards;
+          animation: background-animation 1s forwards;
+}
+.fixing__card:hover .fixing__arrow::after {
+  -webkit-animation: background-animation 1s forwards;
+          animation: background-animation 1s forwards;
+}
+.fixing__card:hover .fixing__arrow::before {
+  -webkit-animation: background-animation 1s forwards;
+          animation: background-animation 1s forwards;
+}
+.fixing__card:active {
+  border: 1px solid var(--blue);
+  text-decoration: none;
+}
+.fixing__card:active .fixing__arrow {
+  background: var(--blue);
+}
+.fixing__card:active .fixing__arrow::after {
+  background: var(--blue);
+}
+.fixing__card:active .fixing__arrow::before {
+  background: var(--blue);
+}
+.fixing__subtitle {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 122%;
+  color: var(--black);
+}
+.fixing__arrow {
+  position: relative;
+  margin: 20px 0 59px 0;
+  width: calc(100% - 64px);
+  height: 2px;
+  background: var(--light-grey);
+}
+.fixing__arrow::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 2px;
+  background: var(--light-grey);
+  transform: rotate(-45deg);
+  right: 0;
+  top: 4px;
+}
+.fixing__arrow::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 2px;
+  background: var(--light-grey);
+  transform: rotate(45deg);
+  right: 0;
+  top: -4px;
+}
+.fixing__picture {
+  width: 195px;
+  height: 154px;
+}
+.fixing__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media screen and (max-width: 1300px) {
+  .fixing__block {
+    padding: 40px 29px 0 29px;
+  }
+  .fixing__product {
+    gap: 15px 11px;
+  }
+  .fixing__card {
+    padding: 20px 19px 14px 19px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .fixing {
+    padding: 100px 0;
+  }
+  .fixing__title {
+    font-size: 24px;
+    line-height: 122%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .fixing__product {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 900px) {
+  .fixing__product {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 720px) {
+  .fixing {
+    padding: 60px 0;
+  }
+  .fixing__title {
+    font-size: 20px;
+    line-height: 122%;
+  }
+  .fixing__block {
+    padding: 30px 9px 0 9px;
+  }
+  .fixing__product {
+    gap: 16px;
+  }
+  .fixing__card {
+    padding: 18px 16px 22px 16px;
+  }
+  .fixing__subtitle {
+    font-size: 18px;
+    line-height: 122%;
+  }
+  .fixing__arrow {
+    margin: 20px 0 22px 0;
+  }
+  .fixing__picture {
+    width: 111px;
+    height: 88px;
+  }
+}/*# sourceMappingURL=fixing.css.map */

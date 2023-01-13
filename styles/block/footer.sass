@@ -1,0 +1,242 @@
+@import 'default'
+
+.footer
+    background: var(--black)
+    padding: 48px 0 50px 0
+
+    &__block
+        padding: 0 106px
+
+    &__up
+        padding: 0 0 20px 0
+        border-bottom: 1px solid var(--light-grey)
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__left
+        display: flex
+        justify-content: start
+        align-items: center
+
+    &__logo
+        padding: 0 15px 0 0
+        text-decoration: none
+
+        &:hover
+            text-decoration: none
+
+    &__image
+        width: 156px
+        height: 23px
+
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: contain
+
+    &__type
+        padding: 0 0 0 15px
+        border-left: 1px solid var(--light-grey)
+
+    &__text
+        font-weight: 400
+        font-size: $small
+        line-height: 20px
+        margin: 0
+        color: var(--light-grey)
+
+    &__right
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__contact
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__info
+        padding: 0 22px 0 25px
+        border-left: 1px solid var(--light-grey)
+
+    &__phone
+        font-weight: 600
+        font-size: $link
+        line-height: 24px
+        color: var(--light-grey)
+        text-decoration: none
+
+    &__time
+        font-weight: 400
+        font-size: $main
+        line-height: 20px
+        color: var(--grey)
+        padding: 5px 0 0 0
+        margin: 0
+
+    &__middle
+        padding: 53px 0 63px 0
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+
+    &__leftward
+        width: 50%
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+
+    &__list
+        list-style-type: none
+        margin: 0 50px 0 0
+
+        &:last-child
+            margin: 0
+
+    &__ref
+        padding: 0 0 12px 0
+
+        &:last-child
+            padding: 0
+
+        &_padding
+            padding: 0 0 15px 0
+
+    &__link
+        font-weight: 400
+        font-size: $main
+        line-height: 122%
+        text-decoration: none
+        color: var(--light-grey)
+
+        &_line
+            line-height: 169.5%
+
+        &:hover
+            color: var(--blue-hover)
+            text-decoration: none
+
+        &:active
+            color: var(--blue-active)
+            text-decoration: none
+
+    &__rightward
+        width: 50%
+        display: flex
+        justify-content: center
+        align-items: flex-start
+
+    &__down
+        max-width: 1000px
+        width: 100%
+        margin: 0 auto
+
+    &__copyright
+        font-weight: 400
+        font-size: $small
+        line-height: 19px
+        color: var(--propose-grey)
+        text-align: center
+
+    &__accordion
+        display: none
+
+@media screen and (max-width: 1200px)
+    .footer
+        padding: 50px 29px
+
+        &__block
+            padding: 0
+
+@media screen and (max-width: 800px)
+    .footer
+        padding: 30px 9px
+
+        &__block
+            display: flex
+            flex-direction: column
+
+        &__middle
+            display: none
+        
+        &__accordion
+            display: block
+
+        &__item
+            &_active
+                & .footer__trigger
+                    border-bottom: none
+
+                & .footer__arrow
+                    transform: rotate(180deg)
+                    stroke: var(--blue)
+
+                & .footer__content
+                    display: block
+
+        &__trigger
+            display: flex
+            width: 100%
+            justify-content: space-between
+            align-items: center
+            padding: 22px 0 13px 0
+            border-bottom: 1px solid var(--light-grey)
+
+            &_none
+                border-bottom: none
+
+        &__checklist
+            font-weight: 400
+            font-size: $main
+            line-height: 122%
+            color: var(--light-grey)
+
+        &__arrow
+            width: 19px
+            height: 10px
+            stroke: var(--light-grey)
+
+        &__content
+            display: none
+
+        &__list
+            padding: 0 0 0 9px
+
+        &__link
+            color: var(--propose-grey)
+
+        &__up
+            padding: 12px 0 20px 0
+            border-bottom: none
+            flex-direction: column
+            align-items: flex-start
+
+        &__contact
+            flex-direction: column
+
+        &__info
+            border-left: none
+            padding: 13px 0
+
+@media screen and (max-width: 450px)
+    .footer
+        &__image
+            width: 74px
+            height: 11px
+
+        &__text
+            font-size: $tiny
+            line-height: 13px
+
+        &__phone
+            font-size: $main
+
+        &__time
+            font-size: $main
+
+        &__copyright
+            font-size: $little
+            text-align: left
+
+        

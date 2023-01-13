@@ -1,0 +1,138 @@
+@import 'default'
+
+.main
+    &__background
+        background: var(--dark-white)
+        border-radius: 50px
+        padding: 44px 65px 44px 106px
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__left
+        height: 100%
+
+    &__block
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        flex-direction: column
+
+    &__header
+        font-weight: 500
+        font-size: $h1
+        line-height: 122%
+        margin: 0
+        font-family: 'Montserrat', Arial, sans-serif
+
+    &__roster
+        display: grid
+        grid-template-columns: auto 1fr
+        gap: 14px 32px
+        padding: 50px 0 50px 32px
+
+    &__text
+        position: relative
+        font-weight: 400
+        font-size: $list
+        line-height: 122%
+        margin: 0
+
+        &::before
+            position: absolute
+            content: ''
+            width: 8px
+            height: 8px
+            background-color: var(--blue)
+            border-radius: 50%
+            top: 10px
+            left: -18px
+        
+        &::after
+            position: absolute
+            content: ''
+            width: 16px
+            height: 16px
+            border: 1px solid var(--blue)
+            box-shadow: 0px 0px 3px 2px rgba(51, 100, 153, 0.16)
+            border-radius: 50%
+            top: 5px
+            left: -23px
+
+    &__picture
+        max-width: 560px
+        width: 100%
+        max-height: 456px
+        height: 100%
+
+    &__img
+        max-width: 560px
+        width: 100%
+        height: 100%
+        object-fit: contain
+
+    &__pushbutton
+        display: none
+
+@media screen and (max-width: 1024px)
+    .main
+        padding: 0 15px
+
+        &__background
+            border-radius: 30px
+            padding: 55px 10px
+
+@media screen and (max-width: 900px)
+    .main
+        &__background
+            flex-direction: column
+            align-items: flex-start
+
+        &__button
+            display: none
+
+        &__right
+            display: flex
+            justify-content: space-between
+            align-items: center
+            flex-direction: column
+            width: 100%
+
+        &__pushbutton
+            display: block
+            width: 100%
+
+@media screen and (max-width: 680px)
+    .main
+        &__br
+            display: none
+
+        &__left
+            width: 100%
+
+        &__header
+            font-size: $h3
+            line-height: 128%
+
+        &__roster
+            display: flex
+            flex-wrap: nowrap
+            overflow-y: hidden
+            overflow-x: auto
+            width: 100%
+            padding: 28px 0 37px 32px
+
+            &::-webkit-scrollbar
+                display: none
+
+        &__text
+            font-size: $link
+            line-height: 122%
+            min-width: fit-content
+            padding: 0 10px 0 0
+
+            &::before
+                top: 7px
+            
+            &::after
+                top: 2px

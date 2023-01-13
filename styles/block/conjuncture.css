@@ -1,0 +1,126 @@
+:root {
+  --white: #ffffff;
+  --dark-white: #f9f9f9;
+  --black: #121212;
+  --grey: #c3c3c3;
+  --propose-grey: #c4c4c4;
+  --light-grey: #e4e4e4;
+  --disabled-grey: #dbdbdb;
+  --description-grey: #9b9b9b;
+  --blue: #232ed1;
+  --blue-hover: #3945f5;
+  --blue-active: #333ff2;
+  --red: #ff0000;
+}
+
+@-webkit-keyframes background-animation {
+  0% {
+    background: var(--light-grey);
+  }
+  100% {
+    background: var(--blue);
+  }
+}
+
+@keyframes background-animation {
+  0% {
+    background: var(--light-grey);
+  }
+  100% {
+    background: var(--blue);
+  }
+}
+@-webkit-keyframes border-animation {
+  0% {
+    border: 1px solid var(--light-grey);
+  }
+  100% {
+    border: 1px solid var(--blue);
+  }
+}
+@keyframes border-animation {
+  0% {
+    border: 1px solid var(--light-grey);
+  }
+  100% {
+    border: 1px solid var(--blue);
+  }
+}
+.conjuncture__background {
+  background: var(--dark-white);
+  border-radius: 50px;
+  padding: 60px 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.conjuncture__title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 122%;
+  text-align: center;
+}
+.conjuncture__title_blue {
+  color: var(--blue);
+  text-transform: uppercase;
+}
+.conjuncture__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 0 0 0;
+}
+.conjuncture__box:last-child {
+  padding: 0 0 0 21px;
+  border-left: 1px solid var(--light-grey);
+}
+.conjuncture__subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+.conjuncture__more {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .conjuncture__background {
+    border-radius: 30px;
+    padding: 40px 14px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .conjuncture__background {
+    padding: 20px 10px;
+  }
+  .conjuncture__title {
+    display: none;
+  }
+  .conjuncture__block {
+    padding: 0;
+    flex-direction: column;
+  }
+  .conjuncture__box:first-child {
+    padding: 0 0 10px 0;
+  }
+  .conjuncture__box:last-child {
+    padding: 0;
+    border-left: none;
+  }
+  .conjuncture__subtitle_more {
+    display: none;
+  }
+  .conjuncture__more {
+    display: block;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 122%;
+    text-decoration: none;
+    color: var(--blue);
+    margin: 10px 0 0 0;
+  }
+  .conjuncture__more_inactive {
+    display: none;
+  }
+}/*# sourceMappingURL=conjuncture.css.map */

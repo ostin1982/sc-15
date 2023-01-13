@@ -1,0 +1,219 @@
+:root {
+  --white: #ffffff;
+  --dark-white: #f9f9f9;
+  --black: #121212;
+  --grey: #c3c3c3;
+  --propose-grey: #c4c4c4;
+  --light-grey: #e4e4e4;
+  --disabled-grey: #dbdbdb;
+  --description-grey: #9b9b9b;
+  --blue: #232ed1;
+  --blue-hover: #3945f5;
+  --blue-active: #333ff2;
+  --red: #ff0000;
+}
+
+@-webkit-keyframes background-animation {
+  0% {
+    background: var(--light-grey);
+  }
+  100% {
+    background: var(--blue);
+  }
+}
+
+@keyframes background-animation {
+  0% {
+    background: var(--light-grey);
+  }
+  100% {
+    background: var(--blue);
+  }
+}
+@-webkit-keyframes border-animation {
+  0% {
+    border: 1px solid var(--light-grey);
+  }
+  100% {
+    border: 1px solid var(--blue);
+  }
+}
+@keyframes border-animation {
+  0% {
+    border: 1px solid var(--light-grey);
+  }
+  100% {
+    border: 1px solid var(--blue);
+  }
+}
+.ask__background {
+  background: var(--dark-white);
+  border-radius: 50px;
+  padding: 60px 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  height: 528px;
+}
+.ask__left {
+  width: 40%;
+  z-index: 4;
+}
+.ask__title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 122%;
+  text-align: center;
+  text-align: left;
+}
+.ask__subtitle {
+  padding: 21px 0 0 0;
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+.ask__info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 35px 0 0 0;
+}
+.ask__propose {
+  padding: 0 0 0 20px;
+}
+.ask__suggest {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--propose-grey);
+}
+.ask__phone {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--propose-grey);
+  text-decoration: none;
+}
+.ask__phone:hover {
+  color: var(--blue-hover);
+  text-decoration: none;
+}
+.ask__phone:active {
+  color: var(--blue-active);
+  text-decoration: none;
+}
+.ask__right {
+  position: relative;
+  width: 60%;
+}
+.ask__right::after {
+  position: absolute;
+  content: "";
+  background: url("../../img/dispatcher.png") no-repeat;
+  top: -362px;
+  right: -62px;
+  width: 535px;
+  height: 626px;
+}
+.ask__right::before {
+  position: absolute;
+  content: "";
+  background: url("../../img/grey-ball.png") no-repeat;
+  top: -264px;
+  right: -120px;
+  width: 723px;
+  height: 568px;
+}
+.ask__additionally {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .ask__background {
+    border-radius: 30px;
+    padding: 59px 18px;
+    height: 447px;
+  }
+  .ask__left {
+    width: 50%;
+  }
+  .ask__right {
+    width: 50%;
+  }
+  .ask__right::after {
+    background: url("../../img/dispatcher-small.png") no-repeat;
+    top: -262px;
+    right: 20px;
+    width: 405px;
+    height: 485px;
+  }
+  .ask__right::before {
+    background: url("../../img/grey-ball-small.png") no-repeat;
+    top: -224px;
+    right: -18px;
+    width: 505px;
+    height: 447px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .ask__title {
+    font-size: 28px;
+    line-height: 122%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .ask__background {
+    flex-direction: column;
+    height: 100%;
+    background: var(--white);
+    padding: 0 9px 69px 9px;
+  }
+  .ask__left {
+    width: 100%;
+    padding: 0 0 18px 0;
+  }
+  .ask__info {
+    display: none;
+  }
+  .ask__right {
+    width: 100%;
+    height: 300px;
+    background: var(--light-grey);
+  }
+  .ask__right::after {
+    background: url("../../img/dispatcher-tiny.png") no-repeat;
+    top: -3px;
+    right: calc(50% - 131px);
+    width: 262px;
+    height: 302px;
+  }
+  .ask__right::before {
+    display: none;
+  }
+  .ask__additionally {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 0 0 0;
+  }
+}
+@media screen and (max-width: 720px) {
+  .ask__title {
+    font-size: 20px;
+    line-height: 122%;
+  }
+  .ask__additionally {
+    flex-direction: column;
+    width: 100%;
+  }
+  .ask__propose {
+    display: flex;
+    padding: 10px 0 0 0;
+  }
+  .ask__suggest {
+    padding: 0 4px 0 0;
+  }
+}/*# sourceMappingURL=ask.css.map */

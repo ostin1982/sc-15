@@ -1,0 +1,304 @@
+@import 'default'
+
+.header
+    position: sticky
+    top: 0
+    background-color: var(--white)
+    z-index: 10
+
+    &__block
+        position: relative
+
+    &__visible
+        padding: 0 106px
+
+    &__up
+        padding: 20px 0
+        border-bottom: 1px solid var(--light-grey)
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__left
+        display: flex
+        justify-content: start
+        align-items: center
+
+    &__logo
+        padding: 0 15px 0 0
+        text-decoration: none
+        
+
+        &:hover
+            text-decoration: none
+
+    &__image
+        width: 156px
+        height: 23px
+
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: contain
+
+    &__type
+        padding: 0 0 0 15px
+        border-left: 1px solid var(--light-grey)
+
+    &__text
+        font-weight: 400
+        font-size: $small
+        line-height: 20px
+        margin: 0
+
+    &__right
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__search
+        padding: 0 13px 0 0
+        
+
+    &__button
+        font-weight: 400
+        font-size: $main
+        line-height: 20px
+        padding: 0 0 0 4px
+        margin: 0
+
+    &__contact
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__contacts
+        display: none
+
+    &__info
+        padding: 0 22px 0 25px
+        border-left: 1px solid var(--light-grey)
+
+    &__phone
+        font-weight: 600
+        font-size: $link
+        line-height: 24px
+        color: var(--black)
+        text-decoration: none
+
+    &__time
+        font-weight: 400
+        font-size: $main
+        line-height: 20px
+        color: var(--grey)
+        padding: 5px 0 0 0
+        margin: 0
+
+    &__down
+        padding: 15px 0
+
+    &__list
+        list-style-type: none
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__link
+        padding: 0 14px
+        font-weight: 400
+        font-size: $link
+        line-height: 26px
+        color: var(--black)
+        text-decoration: none
+
+        &_disabled
+            color: var(--blue-active)
+
+        &:hover
+            color: var(--blue-hover)
+            text-decoration: none
+
+    &__menu
+        display: none
+
+    &__look
+        position: absolute
+        display: flex
+        background: var(--white)
+        box-shadow: 0px 4px 19px rgba(57, 57, 57, 0.11)
+        height: 100%
+        width: 100%
+        top: 0
+        left: 0
+        z-index: 11
+        justify-content: center
+        align-items: center
+        visibility: hidden
+        opacity: 0
+
+        &_active
+            visibility: visible
+            opacity: 1
+            transition: 0.6s
+
+    &__box
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+
+        &::before
+            position: absolute
+            content: ''
+            background: url('../../img/icon/loupe.svg') no-repeat
+            width: 25px
+            height: 28px
+            top: 23px
+            left: 15px
+            z-index: 12
+            cursor: pointer
+
+    &__unit
+        width: 25px
+        height: 25px
+        margin: 0 0 0 30px
+        cursor: pointer
+
+    &__cross 
+        width: 100%
+        height: 100%
+        object-fit: contain
+
+        &:hover
+            opacity: 0.8
+
+@media screen and (max-width: 1200px)
+    .header
+        padding: 0 29px
+
+        &__visible
+            padding: 0
+
+
+@media screen and (max-width: 900px)
+    .header
+        &__up
+            border-bottom: none
+
+        &__contact
+            display: none
+
+        &__contacts 
+            display: flex
+            flex-direction: column
+            padding: 28px 15px 0 15px
+
+        &__menu
+            display: block
+            width: 36px
+            height: 36px
+            display: flex
+            justify-content: center
+            align-items: center
+
+        &__burger
+            display: block
+
+            &_inactive
+                display: none
+
+        &__carte
+            position: absolute
+            top: 21px
+            right: 21px
+
+        &__x
+            display: none
+
+            &_active
+                display: block
+
+        &__down
+            display: none
+
+            &_active 
+                display: block
+                position: fixed
+                top: 0
+                right: 0
+                width: 100vw
+                height: 100vh
+                background: rgba(0, 0, 0, 0.2)
+                padding: 0
+
+        &__opacity
+            background: var(--white)
+            position: absolute
+            top: 0
+            right: 0
+            width: 300px
+            height: 100vh
+            display: flex
+            flex-direction: column
+
+        &__list
+            padding: 80px 0 0 0
+            flex-direction: column
+            align-items: flex-start
+
+        &__roster
+            padding: 0 0 16px 0
+
+        &__link
+            font-size: $main
+            line-height: 26px
+
+        &__info
+            padding: 0 0 14px 0
+            border-left: none
+
+        &__address
+            font-weight: 400
+            font-size: $main
+            line-height: 140%
+            padding: 23px 0 0 0
+
+        &__look
+            width: 100vw
+            left: -29px
+    
+        &__box
+            &::before
+                left: 6vw
+
+        &__unit
+            width: 13px
+            height: 13px
+            margin: 0 0 0 10px
+
+@media screen and (max-width: 720px)
+    .header
+        &__image
+            width: 74px
+            height: 11px
+
+        &__type
+            padding: 0 0 0 5px
+
+        &__text
+            font-size: $tiny
+            line-height: 13px
+
+        &__phone
+            font-size: $main
+
+        &__time
+            font-size: $main
+
+        &__button
+            font-size: $little
+            line-height: 15px
+
+        &__box
+            &::before
+                top: 15px

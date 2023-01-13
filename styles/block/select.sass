@@ -1,0 +1,29 @@
+@import 'default'
+
+.select
+    width: 100%
+    padding: 26px 8px
+    outline: 1px solid var(--propose-grey)
+    border: none
+    border-radius: 8px
+    margin: 0 0 19px 0
+    font-weight: 400
+    font-size: $link
+    line-height: 22px
+    color: var(--propose-grey)
+    appearance: none
+    background: url("../../img/icon/arrow-down.svg") 96% no-repeat
+    cursor: pointer
+
+    &:focus
+        outline: 1px solid var(--blue)
+
+    &:hover
+        outline: 1px solid var(--blue)
+
+@media screen and (max-width: 720px)
+    .select
+        padding: 17px 8px
+        font-size: $main
+        line-height: 20px
+

@@ -1,0 +1,62 @@
+@import 'default'
+
+.input
+    width: 100%
+    padding: 26px 8px
+    outline: 1px solid var(--propose-grey)
+    border: none
+    border-radius: 8px
+    margin: 0 0 19px 0
+    cursor: pointer
+
+    &::placeholder
+        font-weight: 400
+        font-size: $link
+        line-height: 22px
+        color: var(--propose-grey)
+
+    &:focus
+        outline: 1px solid var(--blue)
+
+    &:hover
+        outline: 1px solid var(--blue)
+
+    &[type="text"]
+        font-weight: 400
+        font-size: $link
+        line-height: 22px
+        color: var(--propose-grey)
+
+    &[type="tel"]
+        font-weight: 400
+        font-size: $link
+        line-height: 22px
+        color: var(--propose-grey)
+
+    &__look
+        position: relative
+        width: 696px
+        margin: 0
+        padding: 26px 50px
+
+.highlight
+    background-color: var(--red)
+
+@media screen and (max-width: 900px)
+    .input
+        &__look
+        width: calc(100vw  - 110px )
+        outline: none
+
+@media screen and (max-width: 720px)
+    .input
+        padding: 17px 8px
+
+        &::placeholder
+            font-size: $main
+            line-height: 20px
+
+        &__look
+            width: calc(100vw  - 110px )
+            outline: none
+
