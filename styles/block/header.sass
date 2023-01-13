@@ -172,6 +172,9 @@
         &:hover
             opacity: 0.8
 
+    &__carte
+        display: none
+
 @media screen and (max-width: 1200px)
     .header
         padding: 0 29px
@@ -208,6 +211,7 @@
                 display: none
 
         &__carte
+            display: block
             position: absolute
             top: 21px
             right: 21px
@@ -230,6 +234,7 @@
                 height: 100vh
                 background: rgba(0, 0, 0, 0.2)
                 padding: 0
+                transition: 0.6s
 
         &__opacity
             background: var(--white)
