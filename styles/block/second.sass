@@ -1,0 +1,140 @@
+@import 'default'
+
+.second
+    padding: 40px 0 0 0
+
+    &__title
+        @include title
+        padding: 0 0 50px 0
+
+    &__block
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background: var(--dark-white)
+        border-radius: 50px
+
+    &__left
+        padding: 60px 60px 60px 120px
+        width: 50%
+
+    &__text
+        font-weight: 400
+        font-size: $main
+        line-height: 140%
+
+        &_padding
+            padding: 10px 0 0 0
+
+    &__list
+        padding: 0 0 0 20px
+        list-style-type: none
+
+    &__roster
+        position: relative
+        font-weight: 400
+        font-size: $main
+        line-height: 140%
+
+        &::before
+            position: absolute
+            content: ''
+            width: 2px
+            height: 2px
+            background: var(--black)
+            top: 8px
+            left: -14px
+            border-radius: 50%
+
+    &__point
+        display: none
+
+    &__not-visible
+        display: block
+
+    &__more
+        display: none
+
+    &__right
+        width: 50%
+        height: 100%
+
+    &__box
+        border-radius: 50px
+        overflow: hidden
+        width: auto
+        max-height: 560px
+
+    &__img
+        min-width: 100%
+        height: 100%
+        object-fit: cover
+
+@media screen and (max-width: 1200px)
+    .second
+        &__block
+            border-radius: 30px
+
+        &__title
+            padding: 0 0 40px 0
+
+        &__left
+            padding: 40px 9px 40px 28px
+
+        &__box
+            border-radius: 30px
+
+@media screen and (max-width: 900px)
+    .second
+        &__block
+            flex-direction: column
+
+        &__left
+            width: 100%
+
+        &__point
+            display: inline
+
+            &_not-visible
+                display: none
+
+        &__block
+            display: block
+
+            &_not-visible
+                display: none
+
+        &__not-visible
+            display: none
+
+            &_visible
+                display: block
+
+        &__more
+            display: block
+            margin: 10px 0 0 0
+            font-weight: 500
+            font-size: $more
+            line-height: 122%
+            text-decoration: none
+            color: var(--blue)
+
+            &_not-visible
+                display: none
+
+        &__right
+            width: 100%
+
+@media screen and (max-width: 720px)
+    .second
+        padding: 20px 0 0 0
+
+        &__left
+            padding: 30px 13px 20px 13px
+
+        &__title
+            font-size: $big
+            padding: 0 0 20px 0
+
+        &__box
+            max-height: 314px

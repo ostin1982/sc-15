@@ -110,6 +110,25 @@
         &:disabled
             background: var(--disabled-grey)
 
+    &__table
+        background: var(--blue)
+        border-radius: 10px
+        padding: 18px 26px
+        color: var(--white)
+        font-weight: 400
+        font-size: $main
+        line-height: 24px
+
+        &:hover
+            background-color: var(--blue-hover)
+            box-shadow: 0px 0px 8px rgba(59, 71, 255, 0.58)
+
+        &:active
+            background-color: var(--blue-active)
+
+        &:disabled
+            background: var(--disabled-grey)
+
 @media screen and (max-width: 720px)
     .button
         &__icon

@@ -215,6 +215,9 @@
   .footer__item_active .footer__trigger {
     border-bottom: none;
   }
+  .footer__item_active .footer__trigger:hover {
+    border-bottom: none;
+  }
   .footer__item_active .footer__arrow {
     transform: rotate(180deg);
     stroke: var(--blue);
@@ -229,6 +232,12 @@
     align-items: center;
     padding: 22px 0 13px 0;
     border-bottom: 1px solid var(--light-grey);
+  }
+  .footer__trigger:hover {
+    border-bottom: 1px solid var(--blue);
+  }
+  .footer__trigger:hover .footer__arrow {
+    stroke: var(--blue);
   }
   .footer__trigger_none {
     border-bottom: none;

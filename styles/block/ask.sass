@@ -1,6 +1,9 @@
 @import 'default'
 
 .ask
+    &_padding
+        padding: 0 0 108px 0
+
     &__background
         @include background
         flex-direction: row
@@ -111,6 +114,9 @@
 
 @media screen and (max-width: 900px)
     .ask
+        &_padding
+            padding: 0
+
         &__background
             flex-direction: column
             height: 100%

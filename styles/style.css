@@ -5,7 +5,10 @@
 @import 'block/select.css';
 @import 'block/slider.css';
 @import 'block/header.css';
+@import 'block/breadcrumbs.css';
 @import 'block/main.css';
+@import 'block/second.css';
+@import 'block/price.css';
 @import 'block/benefit.css';
 @import 'block/conjuncture.css';
 @import 'block/fixing.css';

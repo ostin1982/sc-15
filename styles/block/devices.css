@@ -181,14 +181,12 @@
   .devices__info {
     flex-direction: column;
     width: 100%;
+    padding: 14px 0 0 0;
   }
   .devices__propose {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 0 0 0;
-  }
-  .devices__suggest {
-    padding: 0 6px 0 0;
   }
 }/*# sourceMappingURL=devices.css.map */

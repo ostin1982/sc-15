@@ -114,6 +114,30 @@ $(() => {
             $('.conjuncture__more').addClass('conjuncture__more_inactive')
         })
     }
+
+    if($('.second__not-visible')) {
+        $('.second__more').click((event) => {
+            event.preventDefault();
+            
+            $('.second__not-visible').addClass('second__not-visible_visible')
+            $('.second__point').addClass('second__point_not-visible')
+            $('.second__more').addClass('second__more_not-visible')
+        })
+    }
+
+    if($('.price')) {
+        $('.price__link').click(function(event) {
+            event.preventDefault();
+
+            $('.price__ref').removeClass('price__ref_active');
+            $('.price__table').removeClass('price__table_active');
+
+            $(this).parents('li').addClass('price__ref_active')
+            $($(this).attr('href')).addClass('price__table_active')
+        })
+
+        $('.price__link:first').click()
+    }
 })
 
 jQuery(($) => {

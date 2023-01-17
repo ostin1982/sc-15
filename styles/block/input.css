@@ -104,6 +104,9 @@
 
 @media screen and (max-width: 900px) {
   .input {
+    width: 100%;
+  }
+  .input__look {
     width: calc(100vw - 110px);
     outline: none;
   }

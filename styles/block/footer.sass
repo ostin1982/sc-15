@@ -168,6 +168,9 @@
                 & .footer__trigger
                     border-bottom: none
 
+                    &:hover
+                        border-bottom: none
+
                 & .footer__arrow
                     transform: rotate(180deg)
                     stroke: var(--blue)
@@ -182,6 +185,12 @@
             align-items: center
             padding: 22px 0 13px 0
             border-bottom: 1px solid var(--light-grey)
+
+            &:hover
+                border-bottom: 1px solid var(--blue)
+
+            &:hover .footer__arrow
+                stroke: var(--blue)
 
             &_none
                 border-bottom: none

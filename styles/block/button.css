@@ -157,6 +157,25 @@
 .button__popup:disabled {
   background: var(--disabled-grey);
 }
+.button__table {
+  background: var(--blue);
+  border-radius: 10px;
+  padding: 18px 26px;
+  color: var(--white);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.button__table:hover {
+  background-color: var(--blue-hover);
+  box-shadow: 0px 0px 8px rgba(59, 71, 255, 0.58);
+}
+.button__table:active {
+  background-color: var(--blue-active);
+}
+.button__table:disabled {
+  background: var(--disabled-grey);
+}
 
 @media screen and (max-width: 720px) {
   .button__icon {

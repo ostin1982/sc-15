@@ -209,9 +209,13 @@
   }
 }
 @media screen and (max-width: 720px) {
+  .contacts {
+    padding: 0 0 72px 0;
+  }
   .contacts__background {
     flex-direction: column-reverse;
     height: 100%;
+    background: inherit;
   }
   .contacts__left {
     width: 100%;

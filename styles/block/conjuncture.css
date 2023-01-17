@@ -71,7 +71,10 @@
   align-items: flex-start;
   padding: 50px 0 0 0;
 }
-.conjuncture__box:last-child {
+.conjuncture__box {
+  padding: 0 6px 0 0;
+}
+.conjuncture__box_border {
   padding: 0 0 0 21px;
   border-left: 1px solid var(--light-grey);
 }

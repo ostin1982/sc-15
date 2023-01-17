@@ -1,0 +1,213 @@
+@import 'default'
+
+.price
+    padding: 40px 0 0 0
+
+    &__block
+        padding: 0 106px
+
+    &__title
+        @include title
+
+    &__tab
+        padding: 50px 25px 20px 25px
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: nowrap
+        overflow-y: hidden
+        overflow-x: auto
+
+        &::-webkit-scrollbar
+            height: 2px
+            width: 12px
+
+        &::-webkit-scrollbar-thumb
+            height: 2px
+            width: 12px
+            background: var(--blue)
+
+    &__list
+        list-style-type: none
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        &_small
+            width: 100%
+
+    &__ref
+        position: relative
+        padding: 24px 0
+        border: 1px solid var(--light-grey)
+        width: 240px
+        text-align: center
+
+        &_small
+            width: 100%
+
+        &:first-child
+            border-radius: 10px 0px 0px 10px
+
+        &:last-child
+            border-radius: 0px 10px 10px 0px
+
+        &_active
+            background: var(--blue)
+            border-radius: 10px
+            transform: scale(1.2)
+            z-index: 4
+
+            &:first-child
+                border-radius: 10px
+
+            &:last-child
+                border-radius: 10px
+
+        &_active .price__link
+            color: var(--white)
+            font-size: $small
+
+        &:hover
+            background: var(--blue)
+            border-radius: 10px
+            transform: scale(1.2)
+
+        &:hover .price__link
+            color: var(--white)
+            font-size: $small
+
+    &__link
+        font-weight: 500
+        font-size: $main
+        line-height: 26px
+        color: var(--black)
+        text-decoration: none
+
+    &__table 
+        padding: 20px 0 0 0
+        display: none
+
+        &_active
+            display: block
+
+    &__contents
+        font-weight: 500
+        font-size: $list
+        line-height: 122%
+        padding: 0 0 19px 0
+
+    &__line
+        padding: 14px 0 11px 0
+        border-bottom: 1px solid var(--light-grey)
+
+        &:hover
+            border-bottom: 1px solid var(--blue)
+
+        &:hover .price__cost
+            color: var(--blue)
+
+        &:hover .price__service
+            color: var(--blue)
+
+        &:hover .price__opacity
+            opacity: 1
+
+    &__range
+        display: flex
+        justify-content: space-between
+        align-items: center
+        text-decoration: none
+
+    &__service
+        font-weight: 400
+        font-size: $big
+        line-height: 140%
+        color: var(--black)
+
+    &__info
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__conditions
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-end
+        padding: 0 54px 0 0
+
+    &__cost
+        font-weight: 600
+        font-size: $big
+        line-height: 140%
+        color: var(--black)
+
+    &__time
+        font-weight: 400
+        font-size: $main
+        line-height: 140%
+        color: var(--propose-grey)
+
+    &__opacity
+        opacity: 0
+
+@media screen and (max-width: 1200px)
+    .price
+        &__block
+            padding: 0 30px
+
+        &__title
+            display: none
+
+        &__tab
+            padding: 10px 25px 20px 25px
+
+@media screen and (max-width: 1024px)
+    .price
+        &__tab
+            padding: 10px 10px 20px 10px
+
+        &__ref
+            &_active
+                transform: scale(1.08)
+
+            &:hover
+                transform: scale(1.08)
+
+        &__line
+            padding: 14px 0 4px 0
+
+        &__service
+            font-size: $link
+
+        &__conditions
+            padding: 0
+
+        &__opacity
+            display: none
+
+
+@media screen and (max-width: 720px)
+    .price
+        &__tab
+            padding: 10px
+
+        &__ref
+            padding: 16px 0
+
+        &__table
+            padding: 10px 0 0 0
+
+        &__contents
+            font-size: $big
+
+        &__service
+            font-size: $main
+
+        &__cost
+            font-size: $main
+
+        &__time
+            font-size: $small

@@ -1,0 +1,41 @@
+@import 'default'
+
+.breadcrumbs
+    &__block
+        padding: 15px 0 8px 0
+        border-bottom: 1px solid var(--light-grey)
+        margin: 0 106px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+    &__main
+        font-weight: 400
+        font-size: $main
+        line-height: 26px
+        color: var(--propose-grey)
+        text-decoration: none
+
+    &__streak
+        padding: 0 7px
+
+    &__page
+        font-weight: 500
+        font-size: $main
+        line-height: 26px
+
+@media screen and (max-width: 1200px)
+    .breadcrumbs
+        &__block
+            margin: 0 30px
+
+@media screen and (max-width: 720px)
+    .breadcrumbs
+        &__block
+            padding: 13px 0 0 0
+
+        &__main
+            font-size: $tiny
+
+        &__page
+            font-size: $tiny
