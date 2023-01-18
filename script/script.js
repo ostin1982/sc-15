@@ -125,6 +125,15 @@ $(() => {
         })
     }
 
+    if($('.devices__lists_inactive')) {
+        $('.devices__more').click((event) => {
+            event.preventDefault();
+            
+            $('.devices__lists').removeClass('devices__lists_inactive')
+            $('.devices__more').addClass('devices__more_inactive')
+        })
+    }
+
     if($('.price')) {
         $('.price__link').click(function(event) {
             event.preventDefault();

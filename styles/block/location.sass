@@ -1,0 +1,105 @@
+@import 'default'
+
+.location
+    padding: 40px 0 0 0
+
+    &__title
+        @include title
+        padding: 0 0 50px 0
+
+    &__block
+        background: var(--dark-white)
+        border-radius: 50px
+        overflow: hidden
+
+    &__info
+        padding: 60px 116px 50px 116px
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+
+    &__card
+        width: auto
+
+    &__heading
+        font-weight: 500
+        font-size: $big
+        line-height: 122%
+        color: var(--blue)
+        padding: 0 0 10px 0
+
+    &__text
+        font-weight: 400
+        font-size: $main
+        line-height: 140%
+        padding: 0 0 6px 0
+
+    &__link
+        font-weight: 400
+        font-size: $main
+        line-height: 140%
+        color: var(--black)
+        text-decoration: none
+
+        &:hover
+            color: var(--blue-hover)
+
+        &:active
+            color: var(--blue-active)
+
+    &__map
+        height: 600px
+        width: 100%
+
+    &__scheme
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+@media screen and (max-width: 1440px)
+    .location
+        padding: 40px 30px 0 30px
+
+@media screen and (max-width: 1200px)
+    .location
+        &__block
+            border-radius: 30px
+
+        &__info
+            padding: 40px 18px
+
+@media screen and (max-width: 1024px)
+    .location
+        padding: 40px 11px 100px 11px
+
+        &__title
+            font-size: $list
+            padding: 0 0 40px 0
+
+@media screen and (max-width: 900px)
+    .location
+        &__info
+            flex-direction: column
+
+        &__card
+            padding: 0 0 15px 0
+
+        &__heading
+            padding: 0 0 5px 0
+
+@media screen and (max-width: 720px)
+    .location
+        padding: 20px 0 50px 0
+
+        &__title
+            font-size: $big
+            padding: 0 0 20px 0
+
+        &__block
+            border-radius: 20px
+
+        &__info
+            padding: 30px 10px 1px 10px
+
+        &__map
+            height: 325px

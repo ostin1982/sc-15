@@ -59,7 +59,7 @@
   text-align: center;
 }
 .price__tab {
-  padding: 50px 25px 20px 25px;
+  padding: 50px 50px 20px 50px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -92,6 +92,7 @@
   border: 1px solid var(--light-grey);
   width: 240px;
   text-align: center;
+  width: 100%;
 }
 .price__ref_small {
   width: 100%;
@@ -105,7 +106,7 @@
 .price__ref_active {
   background: var(--blue);
   border-radius: 10px;
-  transform: scale(1.2);
+  transform: scale(1.18);
   z-index: 4;
 }
 .price__ref_active:first-child {
@@ -121,7 +122,7 @@
 .price__ref:hover {
   background: var(--blue);
   border-radius: 10px;
-  transform: scale(1.2);
+  transform: scale(1.18);
 }
 .price__ref:hover .price__link {
   color: var(--white);
@@ -216,7 +217,7 @@
 }
 @media screen and (max-width: 1024px) {
   .price__tab {
-    padding: 10px 10px 20px 10px;
+    padding: 10px 17px 20px 17px;
   }
   .price__ref_active {
     transform: scale(1.08);

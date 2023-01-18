@@ -1,0 +1,124 @@
+@import 'default'
+
+.error
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-direction: column
+    height: 100vh
+    position: relative
+    padding: 72px 0 0 0
+    z-index: 2
+    overflow: hidden
+
+    &::after
+        content: ''
+        position: absolute
+        width: 707px
+        height: 557px
+        top: 0
+        left: 0
+        background: url('../../img/error-left.png')
+        z-index: -1
+
+    &::before
+        content: ''
+        position: absolute
+        width: 707px
+        height: 743px
+        top: 0
+        right: -10px
+        background: url('../../img/error-right.png') 
+        z-index: -1
+
+    &__title
+        position: relative
+        font-weight: 500
+        font-size: $h3
+        line-height: 32px
+        color: var(--blue)
+        padding: 0 0 15px 0
+        z-index: 2
+
+    &__circle
+        min-width: 288px
+        min-height: 288px
+        border-radius: 50%
+        background: var(--dark-white)
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__number
+        font-weight: 900
+        font-size: $error
+        line-height: 115px
+        color: var(--blue)
+
+    &__subtitle
+        font-weight: 500
+        font-size: $subtitle
+        line-height: 26px
+        text-align: center
+        padding: 15px 0
+        width: 452px
+        color: var(--description-grey)
+
+
+@media screen and (max-width: 1440px)
+    .error
+        &::after
+            top: -18px
+            left: 0
+
+        &::before
+            top: -70px
+            right: -140px
+
+@media screen and (max-width: 1220px)
+    .error
+        &::after
+            width: 521px
+            height: 498px
+            top: 0
+            left: 0
+            background: url('../../img/error-left-small.png')
+
+        &::before
+            width: 452px
+            height: 244px
+            top: 0
+            right: 0
+            background: url('../../img/error-right-small.png') 
+
+@media screen and (max-width: 900px)
+    .error
+        &::after
+            width: 165px
+            height: 406px
+            background: url('../../img/error-left-tiny.png')
+            z-index: 1
+
+        &::before
+            width: 165px
+            height: 235px
+            background: url('../../img/error-right-tiny.png') 
+            z-index: 1
+
+@media screen and (max-width: 600px)
+    .error
+        &__title
+            font-size: $title
+            width: 180px
+            text-align: center
+
+        &__circle
+            width: 260px
+            height: 260px
+
+        &__number
+            font-size: $error-small
+
+        &__subtitle
+            width: 240px
+            font-size: $link

@@ -122,6 +122,9 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .second {
+    padding: 40px 12px 0 12px;
+  }
   .second__block {
     border-radius: 30px;
   }

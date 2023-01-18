@@ -46,6 +46,9 @@
     border: 1px solid var(--blue);
   }
 }
+.main_padding {
+  padding: 14px 0 0 0;
+}
 .main__background {
   background: var(--dark-white);
   border-radius: 50px;
@@ -69,6 +72,9 @@
   line-height: 122%;
   margin: 0;
   font-family: "Montserrat", Arial, sans-serif;
+}
+.main__header_small {
+  font-size: 44px;
 }
 .main__roster {
   display: grid;

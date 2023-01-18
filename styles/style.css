@@ -8,9 +8,14 @@
 @import 'block/breadcrumbs.css';
 @import 'block/main.css';
 @import 'block/second.css';
+@import 'block/repairs.css';
+@import 'block/warranty.css';
+@import 'block/location.css';
+@import 'block/typical.css';
 @import 'block/price.css';
 @import 'block/benefit.css';
 @import 'block/conjuncture.css';
+@import 'block/conditions.css';
 @import 'block/fixing.css';
 @import 'block/devices.css';
 @import 'block/statistics.css';
@@ -18,3 +23,4 @@
 @import 'block/contacts.css';
 @import 'block/footer.css';
 @import 'block/popup.css';
+@import 'block/error.css';

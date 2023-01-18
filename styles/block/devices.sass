@@ -1,6 +1,9 @@
 @import 'default'
     
 .devices
+    &_padding
+        padding: 100px 0
+
     &__background
         @include background
 
@@ -13,6 +16,12 @@
         align-items: flex-start
         width: 100%
         margin: 83px 0 73px 0
+
+        &_margin
+            margin: 0 0 73px 0
+
+        &_inactive
+            display: none
 
     &__list
         position: relative
@@ -82,6 +91,26 @@
             color: var(--blue-active)
             text-decoration: none
 
+    &__more
+        font-weight: 400
+        font-size: $link
+        line-height: 140%
+        color: var(--black)
+        text-decoration: none
+
+        &:hover
+            color: var(--blue)
+
+        &_inactive
+            display: none
+
+@media screen and (max-width: 1200px)
+    .devices
+        padding: 40px 14px 0 14px
+
+        &_padding
+            padding: 100px 14px
+
 @media screen and (max-width: 1024px)
     .devices
         &__background
@@ -113,6 +142,11 @@
 
 @media screen and (max-width: 720px)
     .devices
+        padding: 60px 0
+        
+        &_padding
+            padding: 60px 0
+
         &__title
             font-size: $big
             line-height: 122%

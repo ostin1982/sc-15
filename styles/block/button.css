@@ -176,6 +176,32 @@
 .button__table:disabled {
   background: var(--disabled-grey);
 }
+.button__error {
+  background: var(--blue);
+  border-radius: 10px;
+  padding: 24px 80px;
+  color: var(--white);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+}
+.button__error:hover {
+  background-color: var(--blue-hover);
+  box-shadow: 0px 0px 8px rgba(59, 71, 255, 0.58);
+}
+.button__error:active {
+  background-color: var(--blue-active);
+}
+.button__error:disabled {
+  background: var(--disabled-grey);
+}
+.button__error_padding {
+  padding: 24px 69px;
+}
+.button__error_pushbutton {
+  width: 100%;
+}
 
 @media screen and (max-width: 720px) {
   .button__icon {
