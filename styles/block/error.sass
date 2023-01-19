@@ -11,25 +11,47 @@
     z-index: 2
     overflow: hidden
 
-    &::after
-        content: ''
-        position: absolute
-        width: 707px
-        height: 557px
-        top: 0
-        left: 0
-        background: url('../../img/error-left.png')
-        z-index: -1
+    &_404
+        &::after
+            content: ''
+            position: absolute
+            width: 707px
+            height: 557px
+            top: 0
+            left: 0
+            background: url('../../img/error-left.png')
+            z-index: -1
 
-    &::before
-        content: ''
-        position: absolute
-        width: 707px
-        height: 743px
-        top: 0
-        right: -10px
-        background: url('../../img/error-right.png') 
-        z-index: -1
+        &::before
+            content: ''
+            position: absolute
+            width: 707px
+            height: 743px
+            top: 0
+            right: -10px
+            background: url('../../img/error-right.png') 
+            z-index: -1
+
+    &_500
+        &::after
+            content: ''
+            position: absolute
+            width: 769px
+            height: 653px
+            top: 0
+            left: 0
+            background: url('../../img/error-left-500.png')
+            z-index: -1
+
+        &::before
+            content: ''
+            position: absolute
+            width: 642px
+            height: 599px
+            top: 0
+            right: 0
+            background: url('../../img/error-right-500.png') 
+            z-index: -1
 
     &__title
         position: relative
@@ -67,43 +89,85 @@
 
 @media screen and (max-width: 1440px)
     .error
-        &::after
-            top: -18px
-            left: 0
+        &_404
+            &::after
+                top: -18px
+                left: 0
 
-        &::before
-            top: -70px
-            right: -140px
+            &::before
+                top: -70px
+                right: -140px
+
+        &_500
+            &::after
+                top: -18px
+                left: 0
+
+            &::before
+                top: -70px
+                right: -140px
 
 @media screen and (max-width: 1220px)
     .error
-        &::after
-            width: 521px
-            height: 498px
-            top: 0
-            left: 0
-            background: url('../../img/error-left-small.png')
+        &_404
+            &::after
+                width: 521px
+                height: 498px
+                top: 0
+                left: 0
+                background: url('../../img/error-left-small.png')
 
-        &::before
-            width: 452px
-            height: 244px
-            top: 0
-            right: 0
-            background: url('../../img/error-right-small.png') 
+            &::before
+                width: 452px
+                height: 244px
+                top: 0
+                right: 0
+                background: url('../../img/error-right-small.png') 
+
+        &_500
+            &::after
+                width: 508px
+                height: 220px
+                top: 400px
+                left: 0
+                background: url('../../img/error-left-small-500.png')
+
+            &::before
+                width: 470px
+                height: 490px
+                top: 0
+                right: 0
+                background: url('../../img/error-right-small-500.png') 
 
 @media screen and (max-width: 900px)
     .error
-        &::after
-            width: 165px
-            height: 406px
-            background: url('../../img/error-left-tiny.png')
-            z-index: 1
+        &_404
+            &::after
+                width: 165px
+                height: 406px
+                background: url('../../img/error-left-tiny.png')
+                z-index: 1
 
-        &::before
-            width: 165px
-            height: 235px
-            background: url('../../img/error-right-tiny.png') 
-            z-index: 1
+            &::before
+                width: 165px
+                height: 235px
+                background: url('../../img/error-right-tiny.png') 
+                z-index: 1
+
+        &_500
+            &::after
+                width: 313px
+                height: 184px
+                top: 0
+                background: url('../../img/error-left-tiny-500.png')
+                z-index: 1
+
+            &::before
+                width: 198px
+                height: 137px
+                top: 40vh
+                background: url('../../img/error-right-tiny-500.png') 
+                z-index: 1
 
 @media screen and (max-width: 600px)
     .error

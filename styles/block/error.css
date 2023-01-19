@@ -57,7 +57,7 @@
   z-index: 2;
   overflow: hidden;
 }
-.error::after {
+.error_404::after {
   content: "";
   position: absolute;
   width: 707px;
@@ -67,7 +67,7 @@
   background: url("../../img/error-left.png");
   z-index: -1;
 }
-.error::before {
+.error_404::before {
   content: "";
   position: absolute;
   width: 707px;
@@ -75,6 +75,26 @@
   top: 0;
   right: -10px;
   background: url("../../img/error-right.png");
+  z-index: -1;
+}
+.error_500::after {
+  content: "";
+  position: absolute;
+  width: 769px;
+  height: 653px;
+  top: 0;
+  left: 0;
+  background: url("../../img/error-left-500.png");
+  z-index: -1;
+}
+.error_500::before {
+  content: "";
+  position: absolute;
+  width: 642px;
+  height: 599px;
+  top: 0;
+  right: 0;
+  background: url("../../img/error-right-500.png");
   z-index: -1;
 }
 .error__title {
@@ -112,42 +132,78 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .error::after {
+  .error_404::after {
     top: -18px;
     left: 0;
   }
-  .error::before {
+  .error_404::before {
+    top: -70px;
+    right: -140px;
+  }
+  .error_500::after {
+    top: -18px;
+    left: 0;
+  }
+  .error_500::before {
     top: -70px;
     right: -140px;
   }
 }
 @media screen and (max-width: 1220px) {
-  .error::after {
+  .error_404::after {
     width: 521px;
     height: 498px;
     top: 0;
     left: 0;
     background: url("../../img/error-left-small.png");
   }
-  .error::before {
+  .error_404::before {
     width: 452px;
     height: 244px;
     top: 0;
     right: 0;
     background: url("../../img/error-right-small.png");
   }
+  .error_500::after {
+    width: 508px;
+    height: 220px;
+    top: 400px;
+    left: 0;
+    background: url("../../img/error-left-small-500.png");
+  }
+  .error_500::before {
+    width: 470px;
+    height: 490px;
+    top: 0;
+    right: 0;
+    background: url("../../img/error-right-small-500.png");
+  }
 }
 @media screen and (max-width: 900px) {
-  .error::after {
+  .error_404::after {
     width: 165px;
     height: 406px;
     background: url("../../img/error-left-tiny.png");
     z-index: 1;
   }
-  .error::before {
+  .error_404::before {
     width: 165px;
     height: 235px;
     background: url("../../img/error-right-tiny.png");
+    z-index: 1;
+  }
+  .error_500::after {
+    width: 313px;
+    height: 184px;
+    top: 0;
+    background: url("../../img/error-left-tiny-500.png");
+    z-index: 1;
+  }
+  .error_500::before {
+    width: 198px;
+    height: 137px;
+    top: 40vh;
+    background: url("../../img/error-right-tiny-500.png");
     z-index: 1;
   }
 }
