@@ -115,6 +115,24 @@ $(() => {
         })
     }
 
+    if($('.fixing__hidden')) {
+        $('.fixing__more').click((event) => {
+            event.preventDefault();
+            
+            $('.fixing__hidden').addClass('fixing__hidden_active')
+            $('.fixing__bottom').addClass('fixing__bottom_inactive')
+        })
+    }
+
+    if($('.price__hidden')) {
+        $('.price__more').click((event) => {
+            event.preventDefault();
+            
+            $('.price__hidden').addClass('price__hidden_active')
+            $('.price__bottom').addClass('price__bottom_inactive')
+        })
+    }
+
     if($('.second__not-visible')) {
         $('.second__more').click((event) => {
             event.preventDefault();
@@ -135,17 +153,26 @@ $(() => {
     }
 
     if($('.price')) {
-        $('.price__link').click(function(event) {
+        $('.price__ref').click(function(event) {
             event.preventDefault();
+            event.stopImmediatePropagation();
 
             $('.price__ref').removeClass('price__ref_active');
             $('.price__table').removeClass('price__table_active');
 
-            $(this).parents('li').addClass('price__ref_active')
-            $($(this).attr('href')).addClass('price__table_active')
+            $(this).addClass('price__ref_active')
+            $($(this).children('a').attr('href')).addClass('price__table_active')
         })
 
         $('.price__link:first').click()
+    }
+
+    if($('.header__look')) {
+        $('.input__look').click((event) => {
+            event.preventDefault();
+            
+            $('.header__see').addClass('header__see_active')
+        })
     }
 })
 
@@ -158,4 +185,5 @@ $(document).ready(function() {
         highlight: true,
     });
 });
+
 
